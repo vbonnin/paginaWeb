@@ -1,0 +1,444 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Establecemos el tamaño de fuente, del cuerpo de la página y establecemos el fondo con una imagen la cual no se repetira */
+body {  
+  font-size: 1em;
+  background-image: url(imagenes/infineat.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* Aqui establecemos la barra superior de navegacion */
+.navegacion {
+  width: auto;
+  height: 3.125em;
+  margin: 0px auto;
+  text-align: left;
+  background-color: transparent;
+}
+
+.navegacion ul {
+  list-style: none;
+}
+/* Establecemos la posicion y el tipo de visualización */
+.menu > li {
+  position: relative;
+  display: inline-block;
+}
+/* Establecemos el estilo de los enlaces dentro de la barra superior de navegación */
+.menu > li > a {
+  display: block;
+  padding: 0.9375em 1.25em;
+  color: rgba(245, 245, 245, 0.819);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+}
+
+/* Establecemos el hover cuando pasemos con el raton por encima del menu */
+.menu li a:hover {
+  color: #d9ad26;
+  transition: all .3s;
+}
+/* Establece el estilo del submenu de la barra superior de navegación */
+.submenu {
+  position: absolute;
+  background-color: #33333353;
+  width: 120%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.5s;
+  z-index: 1;
+}
+/* Establecemos el estilo de los enlaces dentro del submenu de la barra superior de navegación */
+.submenu li a {
+  display: block;
+  text-align: center;
+  border-radius: 1.25em;
+  padding: 0.9375em;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+}
+/* Establecemos el hover cuando pasemos con el raton por encima del submenu */
+.menu li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  border-radius: 1.25em;
+}
+
+
+/* Establecemos un flexbox para colocar las imagenes centrales de la pagina indice */
+.contenedor {
+  display: flex;
+  color: #d9ad26;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* A cada una de los cuadros los hacemos por separado para poder introducir fondos de imagenes distintas */
+.cuadro {
+  flex: 1;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-top: -6em;
+  background-image: url(imagenes/platothai.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0.125em solid #d9ad26;
+  padding: 0;
+  height: 25em;
+  width: 25.6875em;
+  border-radius: 0.625em;
+}
+
+.cuadro2 {
+  flex: 1;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-top: -6em;
+  background-image: url(imagenes/platoInfineat.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0.125em solid #d9ad26;
+  padding: 0; 
+  height: 25em;
+  width: 25.6875em;
+  border-radius: 0.625em;
+}
+
+
+.cuadro3 {
+  flex: 1;
+  margin-left: 0.3125em;
+  margin-right: 0.3125em;
+  margin-top: -6em;
+  background-image: url(imagenes/plato\ infineatruck.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 0.125em solid #d9ad26;
+  padding: 0;
+  height: 25em;
+  width: 25.6875em;
+  border-radius: 0.625em;
+}
+  .cuadro:last-child {
+    margin-right: 0.3125em;
+  }
+  
+  /* Aqui introducimos el footer para todas las paginas */
+  footer {
+    background-color: #33333385;
+    color: #fff;
+    padding: 0.4375em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  /* Los estilos que se seguira en el footer */
+  .info {
+    max-width: 87.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.625em;
+    align-items: center;
+}
+  
+  .info p {
+    font-size: 0.8em;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    width: 300%;
+  }
+  /* Aqui introducimos los estilos para el formulario */
+  .form-container {
+    border: 0.1875em solid #d9ad26;
+    color:  #d9ad26;
+    padding: 0.625em;
+    margin: auto;
+    margin-top: -4em;
+    width: 25em;
+    background-color: #222215;
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  
+  
+  .form-container form {
+    box-sizing: border-box;
+  }
+  
+  .input-text, .input-email, .input-password, .input-number, .input-select {
+    border: 0.125em solid #d9ad26;
+    margin: 0.3125em;
+    padding: 0.625em;
+    width: 90%;
+    align-items: center;
+  }
+  
+  .input-text:hover, .input-email:hover, .input-password:hover, .input-number:hover, .input-select:hover, .input-checkbox:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .input-text:focus, .input-email:focus, .input-password:focus, .input-number:focus, .input-select:focus {
+    background-color: #f9f9f9;
+    border: 0.125em solid #555;
+  }
+  
+  .input-submit, .input-reset {
+    background-color: #d9ad26;
+    border: none;
+    color: white;
+    padding: 0.625em 1.25em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.3125em;
+    cursor: pointer;
+    width: 45%;
+  }
+  
+  .input-submit:hover, .input-reset:hover {
+    background-color: #997919;
+  }
+  
+  .input-password.restricted {
+    font-weight: bold;
+  }
+  /* aplicamos una animacion en el formulario */
+
+  @keyframes slidein {
+    from {
+      transform: translateX(250%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  /* ajustamos la medida de la pantalla para distintos dispositivos */
+@media only screen and (max-width: 37.5em
+) {
+.navegacion {
+  display: none;
+}  
+}
+  
+
+/* Introducions los estilos para el menu lateral y para los botones */
+#btn-menu{
+  display: none;
+}
+.container-menu{
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+#btn-menu:checked ~ .container-menu{
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu{
+  width: 100%;
+  max-width: 15.625em;
+  background: #1c1c1c;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+  transform: translateX(0%);
+}
+.cont-menu nav{
+  transform: translateY(15%);
+}
+.cont-menu nav a{
+  display: block;
+  text-decoration: none;
+  padding: 0.625em;
+  color: #c7c7c7;
+  border-left: 0.3125em solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+  border-left: 0.3125em solid  #d9ad26;
+  background: #1f1f1f;
+  color:  #d9ad26;
+}
+.cont-menu label{
+  position: absolute;
+  right: 0.3125em;
+  top: 0.625em;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.1125em;
+}
+/* aqui realizamos el estilo al boton */
+.boton{
+  width: 100%;
+  height: 6.25em;
+  position: left;
+  top: 3.125em;
+  left: 1.25em;
+  font-size: 2em;
+  color: white;
+}
+
+label:hover {
+  cursor: pointer;
+  color:  #d9ad26;
+}
+/* Introducimos los estilos para la tabla */
+table, th, td {
+  border: 0.125em solid;
+  border-color: #d9ad26;
+  color: white;
+  margin: auto;
+  margin-top: auto;
+  font-size: 1em;
+  height: 2.8125em;
+  text-align: center;
+  animation-duration: 3s;
+  animation-name: slidein;
+  
+}
+
+th {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #997919;
+  background-color: #3b3939;
+  
+}
+td{
+  padding: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+th, td {
+  text-align: center;
+  border: 0.125em solid;
+  border-color: #d9ad26;
+  height: 2.8125em;
+}
+
+tr:first-child {
+  background-color: #3b3939;
+  color: #997919;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(56, 57, 47, 0.824);
+}
+
+tr:nth-child(odd) {
+  background-color: #312525;
+}
+
+td {
+  color: white;
+  font-size: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+tr:hover {
+  background-color: #d9ad26;
+}
+
+/* Introducimos los estilos para la galeria de fotos y los textos para la pagina infineat */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0;
+  z-index: 2;
+}
+
+.gallery-item {
+  position: relative;
+  width: 25em;
+  height: 20.6875em;
+
+  
+  
+  
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: -6em;
+  border-radius: 0.625em;
+  
+}
+
+.gallery-item-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d9ad26;
+  color: #fff;
+  padding: 0.625em;
+  text-align: center;
+  margin-top: -3em; 
+  transform: translate(0, -50%);
+  border-radius: 0.625em;
+}
+
+.gallery-item-caption p {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  
+}
+
+/* Introducimos los estilos para la galeria de fotos de la pagina infineathai */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 3em;
+  padding-right: 3em;
+  z-index: 2;
+}
+
+.galeria-item {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+
+.grande {
+  width: calc(100% / 3 - 1.25em);
+  height: 16em;
+}
+
+.pequeña {
+  width: calc(100% / 4 - 1.25em);
+  height: 12.5em;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: -10em;
+}
+
